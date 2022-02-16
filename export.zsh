@@ -6,7 +6,6 @@ export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 
 # fzf
 export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --preview '(highlight -O ansi {} || bat {}) 2> /dev/null | head -500' --bind 'f2:execute(vim {})'"
-export FZF_TMUX=1
 
 # Editors
 export EDITOR='nvim'

@@ -3,7 +3,7 @@ source ~/.config/zsh/setup.zsh
 # oh-my-zsh {{
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME=""
-plugins=(ag docker fd fzf git gradle golang mvn pip shell-proxy tmux zoxide)
+plugins=(ag docker fd fzf git gradle golang mvn pip shell-proxy tmux zoxide zsh-interactive-cd)
 source $ZSH/oh-my-zsh.sh
 # }}
 
