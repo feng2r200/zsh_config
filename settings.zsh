@@ -1,0 +1,11 @@
+ZSH_TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
+
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_USE_ASYNC=true
+
+HISTFILE="$XDG_CACHE_HOME/zsh/zsh_history"
+
+setopt HIST_IGNORE_SPACE
+
+SHELLPROXY_URL="http://127.0.0.1:6152"
+proxy enable
