@@ -8,10 +8,10 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # oh-my-zsh {{
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME=""
-plugins=(ag docker fd fzf git mvn pip rust shell-proxy tmux zoxide)
-source $ZSH/oh-my-zsh.sh
+# export ZSH="$HOME/.oh-my-zsh"
+# ZSH_THEME=""
+# plugins=(ag docker fd fzf git mvn pip rust shell-proxy tmux)
+# source $ZSH/oh-my-zsh.sh
 # }}
 
 # zsh enhance {{
@@ -25,7 +25,7 @@ HISTFILE="$XDG_CACHE_HOME/zsh/zsh_history"
 setopt HIST_IGNORE_SPACE
 
 SHELLPROXY_URL="http://127.0.0.1:6152"
-proxy enable
+#proxy enable
 
 # zsh-completions
 if type brew &>/dev/null; then
@@ -101,6 +101,11 @@ alias mycli-xiaolu='mycli -h 123.59.134.105 -u root -p xiaoluzhuanyongmima -P 40
 alias ssh-ld-ucloud='ssh -i ~/kit/ld_ucloud.com.pem ubuntu@117.50.163.231'
 # }
 
-eval "$(navi widget zsh)"
+eval "$(zoxide init zsh)"
+
+# Source Prezto.
+if [[ -s "$HOME/.zprezto/init.zsh" ]]; then
+  source "$HOME/.zprezto/init.zsh"
+fi
 
 eval "$(starship init zsh)"
