@@ -1,12 +1,3 @@
-# XDG
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
-
-# lang
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
 # oh-my-zsh {{
 # export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME=""
@@ -15,7 +6,10 @@ export LC_ALL=en_US.UTF-8
 # }}
 
 # zsh enhance {{
-ZSH_TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
+
+if [[ -z "$ZSH_CACHE_DIR" ]]; then
+    export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
+fi
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
@@ -23,9 +17,10 @@ ZSH_AUTOSUGGEST_USE_ASYNC=true
 HISTFILE="$XDG_CACHE_HOME/zsh/zsh_history"
 
 setopt HIST_IGNORE_SPACE
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
 
 SHELLPROXY_URL="http://127.0.0.1:6152"
-#proxy enable
 
 # zsh-completions
 if type brew &>/dev/null; then
@@ -35,17 +30,12 @@ if type brew &>/dev/null; then
 	compinit
 fi
 
-# autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # git-extras
 source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 
-# syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # history-substring-search
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+export HISTORY_SUBSTRING_SEARCH_PREFIXED=true
+export HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=true
 
 # }}
 
@@ -60,9 +50,6 @@ export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --preview '(highlight -O ansi {} || bat {}) 2> /dev/null | head -500' --bind 'f2:execute(vim {})'"
 
 # Editors
-export EDITOR='nvim'
-export VISUAL='nvim'
-export PAGER='less'
 export TERM='xterm-256color'
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS='-SR'
@@ -95,6 +82,11 @@ alias ls=' ls -G'
 alias rm=' rm'
 alias exit=' exit'
 
+alias ta='tmux attach -t'
+alias tad='tmux attach -d -t'
+alias ts='tmux new-session -s'
+alias tl='tmux list-sessions'
+
 alias ssh-xiaolu='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -p22222 liangdong@yahzdr2cwnrk.uhasadmin.com'
 alias mycli-xiaolu='mycli -h 123.59.134.105 -u root -p xiaoluzhuanyongmima -P 4080'
 
@@ -107,5 +99,7 @@ eval "$(zoxide init zsh)"
 if [[ -s "$HOME/.zprezto/init.zsh" ]]; then
   source "$HOME/.zprezto/init.zsh"
 fi
+
+proxy enable
 
 eval "$(starship init zsh)"
