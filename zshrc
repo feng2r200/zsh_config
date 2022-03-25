@@ -1,10 +1,3 @@
-# oh-my-zsh {{
-# export ZSH="$HOME/.oh-my-zsh"
-# ZSH_THEME=""
-# plugins=(ag docker fd fzf git mvn pip rust shell-proxy tmux)
-# source $ZSH/oh-my-zsh.sh
-# }}
-
 # zsh enhance {{
 
 if [[ -z "$ZSH_CACHE_DIR" ]]; then
@@ -19,8 +12,6 @@ HISTFILE="$XDG_CACHE_HOME/zsh/zsh_history"
 setopt HIST_IGNORE_SPACE
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
-
-SHELLPROXY_URL="http://127.0.0.1:6152"
 
 # zsh-completions
 if type brew &>/dev/null; then
@@ -40,6 +31,10 @@ export HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=true
 # }}
 
 # export {
+
+# proxy
+export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153
+
 # java path config
 export JAVA_HOME=$(/usr/libexec/java_home)
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
@@ -99,7 +94,5 @@ eval "$(zoxide init zsh)"
 if [[ -s "$HOME/.zprezto/init.zsh" ]]; then
   source "$HOME/.zprezto/init.zsh"
 fi
-
-proxy enable
 
 eval "$(starship init zsh)"
