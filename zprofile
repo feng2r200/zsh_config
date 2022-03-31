@@ -2,7 +2,7 @@
 # Browser
 #
 
-if [[ "$OSTYPE" == darwin* ]]; then
+if [[ -z "$BROWSER" && "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
 
