@@ -36,7 +36,7 @@ export HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=true
 export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153
 
 # java path config
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export JDK_HOME=$JAVA_HOME
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
@@ -85,7 +85,7 @@ alias tl='tmux list-sessions'
 alias ssh-xiaolu='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -p22222 liangdong@yahzdr2cwnrk.uhasadmin.com'
 alias mycli-xiaolu='mycli -h 123.59.134.105 -u root -p xiaoluzhuanyongmima -P 4080'
 
-alias ssh-ld-ucloud='ssh -i ~/kit/ld_ucloud.com.pem ubuntu@117.50.163.231'
+# alias ssh-ld-ucloud='ssh -i ~/kit/ld_ucloud.com.pem ubuntu@117.50.163.231'
 # }
 
 eval "$(zoxide init zsh)"

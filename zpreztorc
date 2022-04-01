@@ -37,6 +37,7 @@ zstyle ':prezto:load' pmodule \
   'ag' \
   'fd' \
   'fzf' \
+  'mvn' \
   'pip' \
   'rust' \
   'completion'
