@@ -84,7 +84,6 @@ alias ssh-xiaolu='ssh -o PreferredAuthentications=password -o PubkeyAuthenticati
 alias mycli-xiaolu='mycli -h 123.59.134.105 -u root -p xiaoluzhuanyongmima -P 4080'
 alias mycli-local='mycli -u root -p root'
 
-# alias ssh-ld-ucloud='ssh -i ~/kit/ld_ucloud.com.pem ubuntu@117.50.163.231'
 # }
 
 eval "$(zoxide init zsh)"
