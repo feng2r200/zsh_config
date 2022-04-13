@@ -33,14 +33,14 @@ zstyle ':prezto:load' pmodule \
   'syntax-highlighting' \
   'history-substring-search' \
   'osx' \
-  'prompt' \
   'ag' \
   'fd' \
   'fzf' \
   'mvn' \
   'pip' \
   'rust' \
-  'completion'
+  'completion' \
+  'prompt'
 
 #
 # Editor
