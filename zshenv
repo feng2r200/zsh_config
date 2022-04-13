@@ -5,6 +5,8 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 . "$HOME/.cargo/env"
 
+SHELL_SESSIONS_DISABLE=1
+
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "$HOME/.zprofile" ]]; then
   source "$HOME/.zprofile"
