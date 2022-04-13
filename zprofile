@@ -10,9 +10,13 @@ fi
 # Editors
 #
 
+export TERM='xterm-256color'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
+
+export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+export LESS='-SR'
 
 #
 # Language
