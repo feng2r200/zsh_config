@@ -11,17 +11,6 @@ setopt HIST_IGNORE_SPACE
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
 
-# zsh-completions
-if type brew &>/dev/null; then
-	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-	autoload -Uz compinit
-	compinit
-fi
-
-# git-extras
-source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
-
 # history-substring-search
 export HISTORY_SUBSTRING_SEARCH_PREFIXED=true
 export HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=true
