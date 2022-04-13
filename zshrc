@@ -79,6 +79,7 @@ alias ta='tmux attach -t'
 alias tad='tmux attach -d -t'
 alias ts='tmux new-session -s'
 alias tl='tmux list-sessions'
+alias tls='~/kit/tmux_ls.sh'
 
 alias ssh-xiaolu='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -p22222 liangdong@yahzdr2cwnrk.uhasadmin.com'
 alias mycli-xiaolu='mycli -h 123.59.134.105 -u root -p xiaoluzhuanyongmima -P 4080'
