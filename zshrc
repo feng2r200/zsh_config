@@ -15,6 +15,8 @@ setopt PUSHD_IGNORE_DUPS
 export HISTORY_SUBSTRING_SEARCH_PREFIXED=true
 export HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=true
 
+# git-extras
+source /usr/local/opt/git-extras/share/git-extras/git-extras-completion.zsh
 # }}
 
 # export {
