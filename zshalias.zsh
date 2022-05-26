@@ -28,7 +28,7 @@ alias tls='~/kit/tmux_ls.sh'
 
 # ssh
 
-alias ssh-xiaolu='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -p22222 liangdong@yahzdr2cwnrk.uhasadmin.com'
+alias ssh-xiaolu='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o ServerAliveInterval=30 -p22222 liangdong@yahzdr2cwnrk.uhasadmin.com'
 alias mycli-xiaolu='mycli -h 123.59.134.105 -u root -p xiaoluzhuanyongmima -P 4080'
 alias mycli-local='mycli -u root -p root'
 
