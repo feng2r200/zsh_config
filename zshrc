@@ -27,6 +27,10 @@ source "$XDG_CONFIG_HOME/zsh/zshexport.zsh"
 source "$XDG_CONFIG_HOME/zsh/zshalias.zsh"
 # }
 
+if [[ -s "$XDG_CONFIG_HOME/zsh/zsh_personal.zsh" ]]; then
+  source "$XDG_CONFIG_HOME/zsh/zsh_personal.zsh"
+fi
+
 eval "$(zoxide init zsh)"
 
 # Source Prezto.
