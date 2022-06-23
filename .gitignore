@@ -1,5 +1,5 @@
 /.zcompdump
-/.zcompdump-LD的MacBook\ Pro\-5.8
+/.zcompdump-.*
 /.zprezto
 /zshrc.*.bak
 .local_history
