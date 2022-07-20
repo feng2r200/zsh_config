@@ -1,7 +1,6 @@
 alias ping='prettyping --nolegend'
 alias top='sudo htop'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias help='tldr'
 alias re='ranger'
 alias vim='nvim'
 alias javac='javac -J-Dfile.encoding=utf8'
