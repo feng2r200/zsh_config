@@ -31,13 +31,13 @@ if [[ -s "$XDG_CONFIG_HOME/zsh/zsh_personal.zsh" ]]; then
   source "$XDG_CONFIG_HOME/zsh/zsh_personal.zsh"
 fi
 
-eval "$(navi widget zsh)"
-
-eval "$(zoxide init zsh)"
-
 # Source Prezto.
 if [[ -s "$HOME/.zprezto/init.zsh" ]]; then
   source "$HOME/.zprezto/init.zsh"
 fi
+
+eval "$(zoxide init zsh)"
+
+eval "$(navi widget zsh)"
 
 eval "$(starship init zsh)"
