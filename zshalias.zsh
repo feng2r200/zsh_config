@@ -25,3 +25,4 @@ alias tls='~/kit/tmux_ls.sh'
 
 ###
 
+alias sdoc="cht.sh"
